@@ -9,10 +9,10 @@ for i in range(LINE):
     matrix.append([float(x) for x in (input(f'Введите три числа цифрами '
                                             f'через пробел - элементы {i + 1}-й строки матрицы 5х4: ').split())])
 
-for i in enumerate(matrix):
+for n, i in enumerate(matrix):
     line_sum = 0
-    for j in i[1]:
+    for j in i:
         line_sum += j
         print(f'{j:<8}', end='')
-    matrix[i[0]] += [line_sum]
+    matrix[n] += [line_sum]
     print(f'{line_sum:<10}')

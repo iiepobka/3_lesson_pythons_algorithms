@@ -13,9 +13,9 @@ max_negative_item = -1
 stop = 0
 
 while stop == 0:
-    for i in enumerate(my_list):
-        if max_negative_item == i[1]:
-            index = i[0]
+    for n, i in enumerate(my_list):
+        if max_negative_item == i:
+            index = n
             stop = 1
             print(f'Максимальный отрицательный элемент в массиве: {max_negative_item}. Его индекс: {index}')
     else:

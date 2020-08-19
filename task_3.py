@@ -14,13 +14,13 @@ max_item_index = 0
 min_item = 0
 min_item_index = 0
 
-for i in enumerate(my_list):
-    if max_item < i[1]:
-        max_item = i[1]
-        max_item_index = i[0]
-    elif min_item > i[1]:
-        min_item = i[1]
-        min_item_index = i[0]
+for n, i in enumerate(my_list):
+    if max_item < i:
+        max_item = i
+        max_item_index = n
+    elif min_item > i:
+        min_item = i
+        min_item_index = n
 
 my_list[max_item_index], my_list[min_item_index] = my_list[min_item_index], my_list[max_item_index]
 print(my_list)
